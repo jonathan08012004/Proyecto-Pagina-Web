@@ -1,0 +1,1220 @@
+/* Estilos globales */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    padding-top: 60px; /* Ajusta este valor según la altura de tu barra de navegación */
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-content {
+    padding-top: 20px; /* Añade un poco de espacio adicional en la parte superior */
+}
+
+/* Estilo del encabezado */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(250, 4, 0);
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 60px; /* Ajusta este valor según la altura real de tu barra de navegación */
+}
+
+.logo {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    right: 100px;
+}
+
+/* Íconos del menú */
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre los íconos */
+}
+
+.container-icon {
+    position: absolute;
+    top: 0px;
+    left: 1220px;
+    cursor: pointer;
+}
+
+.size-6 {
+    width: 32px;
+    height: 32px;
+    color: white;
+}
+
+/* Navegación */
+.navigation ul {
+    position: relative;
+    list-style: none;
+    right: 300px;
+}
+
+.header .navigation ul li {
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.header .navigation ul li a:hover {
+    background-color: #d30505;
+}
+
+.header .navigation ul li ul {
+    position: absolute;
+    right: 0;
+    width: -300px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.627);
+    display: none;
+}
+
+.header .navigation ul li ul li a {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: -229px;
+}
+
+.header .navigation ul li ul li {
+    width: 100%;
+}
+
+.header .navigation ul li:hover > ul {
+    display: initial;
+}
+
+/* Checkbox y hamburguesa */
+#toggle,
+.header label {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 45px;
+    height: 30px;
+}
+
+
+/* Estilos para el footer */
+.footer {
+    background-color: #f8f8f8;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 300px; /* Ajusta el ancho mínimo según necesites */
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fa0400;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.social-icons .facebook-icon {
+    background-color: #3b5998;
+}
+
+.social-icons .instagram-icon {
+    background-color: #e4405f;
+}
+
+.social-icons a:hover {
+    background-color: #fa0400;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Estilos para el carrusel */
+.carrusel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 100px 200px ; /* Ajustamos el margen para dar más espacio al carrusel */
+}
+
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-imagen {
+  width: calc((100% / 3) - 20px);
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+  flex-shrink: 0;
+}
+
+.carrusel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carrusel-button-left {
+  left: 10px;
+}
+
+.carrusel-button-right {
+  right: 10px;
+}
+
+/* Estilos responsivos para el carrusel */
+
+
+.sucursales-mapa {
+  padding: 20px;
+  text-align: center;
+}
+
+#mapa {
+    height: 400px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Estilos para la sección de productos */
+.productos {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra la sección completa */
+}
+
+.productos h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.productos-grid {
+  display: flex;  /* Cambiamos grid por flex */
+  flex-direction: row;  /* Aseguramos que sea en fila */
+  justify-content: space-between;  /* Distribuye el espacio entre los productos */
+  gap: 30px;
+  width: 100%;
+  flex-wrap: nowrap;  /* Evita que los productos se envuelvan */
+}
+
+.producto {
+  flex: 1;  /* Hace que cada producto ocupe el mismo espacio */
+  min-width: 0;  /* Permite que los productos se ajusten */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  max-width: 200px; /* Tamaño fijo para todas las imágenes */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  margin-bottom: 10px;
+}
+
+.producto .descripcion {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.producto .precio {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.cantidad-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  min-width: 35px;
+}
+
+.cantidad-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.cantidad-input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Ocultar flechas del input number */
+.cantidad-input::-webkit-outer-spin-button,
+.cantidad-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.agregar-carrito {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.agregar-carrito:hover {
+  background-color: #2bff00;
+}
+
+/* Estilos para el carrito */
+.container-cart-products {
+    position: relative;
+    top: 0px;
+    right: 180px;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hidden-cart {
+    display: none;
+}
+
+.count-products {
+    position: absolute;
+    top: 14px;
+    left: -10px;
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.cart-empty {
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-right: 10px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container-cart-icon{
+  position: relative;
+  left: 150px;
+  margin-top: 14px;
+}
+
+
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.producto {
+    flex: 0 1 300px; /* base de 300px, pero permite ajuste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 950px) {
+  .header label {
+      display: block;
+      cursor: pointer;
+      order: 1; /* Asegura que aparezca primero */
+  }
+
+  .hamburgueza {
+      position: relative;
+      left: 0; /* Reseteamos la posición right anterior */
+      height: 40px; /* Ajustamos el tamaño */
+      width: auto;
+      margin-right: 20px; /* Aumentamos el margen derecho */
+      margin-top: -35px;
+  }
+
+  .logo {
+      font-size: 35px;
+      position: relative;
+      left: 20px; /* Añadimos margen izquierdo al logo */
+      order: 2; /* El logo aparece después de la hamburguesa */
+      margin-left: 10px; /* Espacio adicional desde la hamburguesa */
+  }
+
+  .header {
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Alinea los elementos al inicio */
+      gap: 15px; /* Añadimos espacio entre todos los elementos del header */
+  }
+
+  /* Ajustamos la posición del carrito */
+  .container-cart-icon {
+      order: 3; /* El carrito aparece al final */
+      margin-left: auto; /* Empuja el carrito hacia la derecha */
+  }
+
+  .menu-icons {
+      gap: 10px; /* Ajustar espacio entre íconos en móvil */
+  }
+
+  .size-6 {
+      position: relative;
+      height: 50px;
+      width: auto;
+      right: 810PX;
+      margin-top: 22px;
+  }
+
+  .logo {
+      font-size: 45px; /* Ajustar tamaño del logo en pantallas pequeñas */
+      position: relative;
+      left:-40px;
+  }
+
+  .hamburgueza {
+      position: absolute;
+      right: 600%;
+      height: 70px;
+  }
+
+  .container-icon{
+      position: absolute;
+      right: 90px;
+      top: -10px;
+      transform: translateY(-10%);
+  }
+
+  .header .navigation {
+      border: 1px solid rgb(255, 255, 255);
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      right: 0;
+      background-color: rgb(248, 2, 2);
+      display: none;
+  }
+
+  .header .navigation ul li ul li a {
+      position: relative;
+  }
+
+  .header .navigation ul li ul li ul li a {
+    left: 40px;
+    position: relative;
+  }
+
+  .header .navigation ul li {
+    position: relative;
+      width: 100%;
+      left: 250px;
+  }
+
+  .header .navigation ul li a {
+      padding: 8px 30px 8px 10%;
+  }
+
+  .header .navigation ul li ul {
+      position: relative;
+      width: 100%;
+      left: 45px;
+  }
+
+  .header .navigation ul li ul li {
+      background-color: rgba(252, 0, 0, 0.659);
+      left: 0px;
+  }
+
+  .header .navigation ul li ul li ul {
+      position: relative;
+      width: 100%;
+      left: 0px;
+  }
+
+  .header .navigation ul li ul li ul li {
+      left: 40px;
+  }
+
+  #toggle:checked ~ .navigation {
+      display: block;
+  }
+
+  .container-icon{
+      right: 10px;
+  }
+
+  /* Estilos responsivos para el footer */
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .footer-section {
+      flex-basis: 100%;
+      text-align: center;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+  .footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer-section h3 {
+      font-size: 16px;
+  }
+
+  .footer-section {
+      margin-bottom: 20px;
+  }
+
+  .social-icons a {
+      width: 35px;
+      height: 35px;
+  }
+
+  .social-icons svg {
+      width: 18px;
+      height: 18px;
+  }
+
+  .footer-bottom p {
+      font-size: 12px;
+  }
+
+  /* Estilos responsivos para el carrusel */
+  .carrusel-container {
+    margin: 80px 20px 50px; /* Aumentamos el margen superior */
+  }
+
+  .carrusel-imagen {
+    width: 100%;
+    margin: 0px auto;
+    max-height: 70vh; /* Reducimos un poco la altura mxima */
+    object-fit: contain;
+  }
+
+  /* Agregamos padding-top al body para compensar la barra de navegación fija */
+  body {
+    padding-top: 50px; /* Ajusta este valor para pantallas más pequeñas si es necesario */
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .header {
+    height: 50px; /* Ajusta la altura para pantallas más pequeñas si es necesario */
+  }
+
+  .main-content {
+    padding-top: 10px;
+  }
+
+  /* Nuevos estilos para los controles de zoom en modo responsivo */
+  #mapa .gm-bundled-control {
+    bottom: 10px !important;
+    left: 10px !important;
+    top: auto !important;
+    right: auto !important;
+  }
+  
+  #mapa .gm-bundled-control .gmnoprint > div {
+    width: 40px !important;
+    height: 81px !important;
+  }
+  
+  /* Aseguramos que el menú desplegable esté por encima del mapa */
+  .header .navigation {
+    z-index: 1001;
+  }
+
+  /* Estilos para los controles de zoom en modo responsivo */
+  .leaflet-control-zoom {
+    position: fixed !important;
+    bottom: 200px !important;
+    left: 20px !important;
+    top: auto !important;
+    right: auto !important;
+    z-index: 1000 !important;
+  }
+  
+  .leaflet-control-zoom a {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 18px !important;
+    background-color: white !important;
+    color: #333 !important;
+    border: 2px solid rgba(0,0,0,0.2) !important;
+    border-radius: 4px !important;
+    display: block !important;
+  }
+
+  .leaflet-control-zoom-in {
+    margin-bottom: 5px !important;
+  }
+
+  /* Aseguramos que el menú desplegable esté por encima del mapa */
+  .header .navigation {
+    z-index: 1001;
+  }
+
+  .productos-grid {
+    display: grid;  /* Cambiamos a grid */
+    grid-template-columns: repeat(2, 1fr);  /* Dos columnas de igual tamaño */
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .producto {
+    width: 100%;  /* Ocupa todo el ancho de su columna */
+    margin: 0;  /* Eliminamos márgenes */
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;  /* Una columna en móviles muy pequeños */
+  }
+
+  /* Ajustes responsivos para el carrito */
+  .container-cart-products {
+    position: fixed; /* Cambiado de absolute a fixed */
+    width: 90%; /* Ancho relativo a la pantalla */
+    max-width: 350px; /* Ancho máximo */
+    height: auto;
+    top: 60px; /* Ajustado para estar debajo del header */
+    right: 10px; /* Alineado a la derecha */
+    left: auto; /* Eliminamos el left anterior */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 15px;
+    z-index: 1002; /* Aseguramos que esté por encima de otros elementos */
+  }
+
+  /* Ajustes para el icono del carrito */
+  .container-icon {
+    position: relative; /* Cambiado de absolute */
+    right: 0px;
+    top: -100;
+    transform: none;
+  }
+
+  .container-cart-icon {
+    position: relative;
+    left: 0;
+    margin-top: 0;
+  }
+
+  /* Ajustes para el contador de productos */
+  .count-products {
+    position: absolute;
+    margin-top:30px;
+    left: -815px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
+
+/* Agregar estos estilos al final del archivo */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.input-group-sm {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: none;
+}
+
+.text-success {
+    color: #4CAF50 !important;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container-cart-products {
+        width: 100%;
+        right: 0;
+    }
+    
+    .table-responsive {
+        margin-bottom: 0;
+    }
+    
+    .card {
+        margin: 10px;
+    }
+}
+
+/* Estilos para la página de carrito */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.my-5 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+}
+
+/* Estilos para la tabla del carrito */
+.table-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Estilos para los botones de cantidad */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #dee2e6;
+}
+
+/* Estilos para el botón de pago */
+.btn-success {
+    background-color: rgb(250, 4, 0);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-success:hover {
+    background-color: #d30505;
+}
+
+/* Estilos para el total */
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+}
+
+.cart-total h4 {
+    margin: 0;
+    color: #333;
+}
+
+/* Estilos para las imágenes de productos */
+.product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de eliminar */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para carrito vacío */
+.empty-cart {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.empty-cart i {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    .table th, 
+    .table td {
+        padding: 10px;
+    }
+    
+    .product-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .quantity-controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .cart-total {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .btn-success {
+        width: 100%;
+    }
+}
+
+/* Estilos para el modal de pago */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    margin: 0;
+    color: #333;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: rgb(250, 4, 0);
+    box-shadow: 0 0 0 2px rgba(250, 4, 0, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Mensajes de estado */
+.status-message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilos para el resumen de compra */
+.product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quantity-btn:hover:not([disabled]) {
+    background: #f8f9fa;
+}
+
+.quantity-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#checkout-btn {
+    background-color: rgb(250, 4, 0);
+    border: none;
+}
+
+#checkout-btn:hover {
+    background-color: #d30505;
+}
+
+/* Estilos para el resumen de productos */
+.resumen-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.resumen-item:last-child {
+    border-bottom: none;
+}
+
+.resumen-item h6 {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.resumen-item small {
+    font-size: 0.8rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .resumen-item {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+

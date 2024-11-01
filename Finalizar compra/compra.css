@@ -1,0 +1,156 @@
+/* Importar los estilos base de la navegación y header */
+@import url('/styles.css');
+
+/* Estilos para el contenedor principal */
+.container.my-5 {
+    margin-top: 120px !important;
+    padding: 0 20px;
+    max-width: 1000px !important;
+    margin-left: 200px !important;
+}
+
+/* Estilos para el título */
+.text-success {
+    color: rgb(250, 4, 0) !important;
+}
+
+/* Estilos para el contenedor de la tabla */
+#cart-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+/* Estilos para la tabla */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    color: #495057;
+}
+
+.table td {
+    vertical-align: middle;
+    color: #212529;
+}
+
+/* Estilos para los controles de cantidad */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #dee2e6;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quantity-btn:hover:not([disabled]) {
+    background: #f8f9fa;
+}
+
+.quantity-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estilos para el botón de eliminar */
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+}
+
+/* Estilos para el total y mensaje */
+.text-muted {
+    color: #6c757d !important;
+}
+
+.fw-bold.text-success {
+    font-size: 1.5rem;
+    color: rgb(250, 4, 0) !important;
+}
+
+/* Estilos para el botón de pago */
+#checkout-btn {
+    background-color: rgb(250, 4, 0);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #d30505;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .container.my-5 {
+        margin-top: 100px !important;
+        padding: 0 10px;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    .quantity-btn {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Asegurar que el carrito desplegable tenga los mismos estilos que en index.html */
+.container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+/* Ajustes para la tabla */
+.table-responsive {
+    min-height: 400px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+    .container.my-5 {
+        margin-left: 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container.my-5 {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
