@@ -142,7 +142,7 @@ function vaciarCarrito() {
 
 function confirmarCompra() {
   if (carrito.length > 0) {
-    window.location.href = '/Finalizar compra/COMPRA.HTML';
+    window.location.href = '/COMPRA.HTML';
   } else {
     alert('El carrito está vacío');
   }

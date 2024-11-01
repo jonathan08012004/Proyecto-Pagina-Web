@@ -20,7 +20,7 @@ function eliminarDelCarrito(nombre) {
     actualizarUI();
     
     if (carrito.length === 0) {
-        window.location.href = '/categorias/index.html';
+        window.location.href = '/index.html';
     }
 }
 
@@ -102,5 +102,5 @@ function finalizarCompra() {
     // Limpia el carrito (si tienes una variable que almacena los productos)
     localStorage.removeItem('carrito');
     // Redirecciona al inicio
-    window.location.href = '/categorias/index.html';
+    window.location.href = '/index.html';
 }
