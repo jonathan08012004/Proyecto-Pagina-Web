@@ -1,4 +1,3 @@
-/* Importar los estilos base de la navegación y header */
 @import url('/styles.css');
 
 /* Estilos para el contenedor principal */
@@ -102,7 +101,7 @@
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .container.my-5 {
         margin-top: 100px !important;
         padding: 0 10px;
@@ -118,7 +117,7 @@
     }
 }
 
-/* Asegurar que el carrito desplegable tenga los mismos estilos que en index.html */
+/* Asegura que el carrito desplegable tenga los mismos estilos que en index.html */
 .container-cart-products {
     position: absolute;
     top: 50px;
@@ -148,7 +147,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .container.my-5 {
         margin-left: 20px !important;
         margin-right: 20px !important;
