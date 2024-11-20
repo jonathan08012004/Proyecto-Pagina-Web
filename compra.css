@@ -1,5 +1,27 @@
 @import url('/styles.css');
 
+.container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+/* Ajustes para la tabla */
+.table-responsive {
+    min-height: 400px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
 /* Estilos para el contenedor principal */
 .container.my-5 {
     margin-top: 120px !important;
@@ -21,10 +43,17 @@
     margin-bottom: 30px;
 }
 
-/* Estilos para la tabla */
-.table {
-    margin-bottom: 0;
+/* Ajustes para la tabla */
+.table-responsive {
+    min-height: 400px;
 }
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
 
 .table th {
     background-color: #f8f9fa;
@@ -103,7 +132,10 @@
 /* Estilos responsivos */
 @media (max-width: 1200px) {
     .container.my-5 {
-        margin-top: 100px !important;
+        margin-top: 20px !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+
         padding: 0 10px;
     }
     
@@ -115,41 +147,14 @@
         width: 24px;
         height: 24px;
     }
-}
 
-/* Asegura que el carrito desplegable tenga los mismos estilos que en index.html */
-.container-cart-products {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #fff;
-    width: 400px;
-    z-index: 1;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    border-radius: 10px;
-}
-
-/* Ajustes para la tabla */
-.table-responsive {
-    min-height: 400px;
-}
-
-.table {
-    width: 100%;
-    margin-bottom: 0;
-    font-size: 1.1rem;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 1200px) {
-    .container.my-5 {
-        margin-left: 100px !important;
+    .logo{
+        left: -105px;
     }
+
+
 }
 
-@media (max-width: 1200px) {
-    .container.my-5 {
-        margin-left: 20px !important;
-        margin-right: 20px !important;
-    }
-}
+
+
+

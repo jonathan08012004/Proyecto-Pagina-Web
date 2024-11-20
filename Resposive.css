@@ -1,0 +1,258 @@
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+
+    body {
+    padding-top: 50px; 
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+      }
+
+    .header label {
+    display: block;
+    cursor: pointer;
+    order: 1; 
+     }
+
+    .header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 15px; 
+    height: 50px;
+     }
+
+    .header .navigation {
+    z-index: 1001;
+    border: 1px solid rgb(255, 255, 255);
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0;
+    background-color: rgb(248, 2, 2);
+    display: none;
+     }
+
+    .header .navigation ul li ul li a {
+    position: relative;
+     }
+
+    .header .navigation ul li ul li ul li a {
+    left: 40px;
+    position: relative;
+     }
+
+    .header .navigation ul li {
+    position: relative;
+    width: 100%;
+    left: 270px;
+      }
+
+    .header .navigation ul li a {
+    padding: 8px 30px 8px 10%;
+      }
+
+    .header .navigation ul li ul {
+    position: relative;
+    width: 100%;
+    left: 45px;
+      }
+
+    .header .navigation ul li ul li {
+    background-color: rgba(252, 0, 0, 0.659);
+    left: 0px;
+      }
+
+    .header .navigation ul li ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0px;
+      }
+
+    .header .navigation ul li ul li ul li {
+    left: 40px;
+      }
+
+    #toggle:checked ~ .navigation {
+    display: block;
+      }
+
+    .hamburgueza {
+    left: 0; 
+    width: auto;
+    margin-right: 20px; 
+    margin-top: -35px;
+    position: absolute;
+    right: 600%;
+    height: 70px;
+      }
+
+    .logo {
+    position: relative;
+    order: 2; 
+    margin-left: 80px;
+    font-size: 45px;
+    left:-40px; 
+      }
+
+    .menu-icons {
+    gap: 10px; 
+      }
+ 
+    /* Estilos responsivos para el footer */
+    .footer-content {
+    flex-direction: column;
+      }
+
+    .footer-section {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+      }
+
+    .footer-section h3 {
+    font-size: 16px;
+      }
+
+    .footer {
+    padding: 30px 0 15px;
+      }
+    
+    .footer-bottom p {
+    font-size: 12px;
+      }
+
+    .social-icons {
+    justify-content: center;
+      }
+
+    .social-icons a {
+    width: 35px;
+    height: 35px;
+      }
+
+    .social-icons svg {
+    width: 18px;
+    height: 18px;
+      }
+
+    /* Estilos responsivos para el carrusel */
+    .carrusel-container {
+    margin: 80px 20px 50px; 
+      }
+
+    .carrusel-imagen {
+    width: 100%;
+    margin: 0px auto;
+    max-height: 70vh;
+    object-fit: contain;
+      }
+
+    .main-content {
+    padding-top: 10px;
+      }
+
+    /* Nuevos estilos para los controles de zoom en modo responsivo */
+    #mapa .gm-bundled-control {
+    bottom: 10px !important;
+    left: 10px !important;
+    top: auto !important;
+    right: auto !important;
+      }
+  
+    #mapa .gm-bundled-control .gmnoprint > div {
+    width: 40px !important;
+    height: 81px !important;
+      }
+  
+
+  /* Estilos para los controles de zoom en modo responsivo */
+    .leaflet-control-zoom {
+    position: fixed !important;
+    bottom: 200px !important;
+    left: 20px !important;
+    top: auto !important;
+    right: auto !important;
+    z-index: 1000 !important;
+      }
+  
+    .leaflet-control-zoom a {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 18px !important;
+    background-color: white !important;
+    color: #333 !important;
+    border: 2px solid rgba(0,0,0,0.2) !important;
+    border-radius: 4px !important;
+    display: block !important;
+      }
+
+    .leaflet-control-zoom-in {
+    margin-bottom: 5px !important;
+      }
+    
+    .product-img {
+    width: 60px;
+    height: 60px;
+      }
+
+    .productos-grid {
+    display: grid;    
+    gap: 15px;
+    padding: 0 15px;
+    grid-template-columns: 1fr; 
+      }
+
+    .producto {
+    width: 100%;  
+    margin: 0; 
+      }
+
+    .container-cart-icon{
+    margin-top: -5px;
+      }
+
+    .table-responsive {
+    margin-bottom: 0;
+    overflow-x: auto;
+      }
+    
+    
+    .card {
+    margin: 10px;
+    margin-bottom: 1rem;
+      }
+
+    
+    .table th, 
+    .table td {
+    padding: 10px;
+      }
+    
+    .quantity-controls {
+    flex-direction: column;
+    gap: 5px;
+      }
+    
+    .cart-total {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+      }
+    
+    .btn-success {
+        width: 100%;
+      }
+    
+    .resumen-item {
+    padding: 8px;
+      }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

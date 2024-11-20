@@ -33,6 +33,8 @@ body {
     height: 60px; 
 }
 
+
+
 .logo {
     font-size: 45px;
     text-transform: uppercase;
@@ -178,6 +180,18 @@ body {
     color: #fa0400;
 }
 
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 14px;
+}
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -213,17 +227,7 @@ body {
     background-color: #fa0400;
 }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #e7e7e7;
-}
 
-.footer-bottom p {
-    color: #666;
-    font-size: 14px;
-}
 
 /* Estilos para el carrusel */
 .carrusel-container {
@@ -310,7 +314,7 @@ body {
 }
 
 .producto {
-  flex: 1;  
+  flex: 0 1 300px;  
   min-width: 0;  
   display: flex;
   flex-direction: column;
@@ -467,9 +471,19 @@ body {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.cart-total h3 {
-    font-size: 20px;
-    font-weight: 700;
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+}
+
+.cart-total h4 {
+    margin: 0;
+    color: #333;
 }
 
 .total-pagar {
@@ -482,16 +496,6 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-}
-
-.producto {
-    flex: 0 1 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
 }
 
 /* Ajustes para el contenedor del ícono del carrito */
@@ -544,6 +548,7 @@ body {
     position: relative;
 }
 
+
 .modal-header {
     border-bottom: 1px solid #dee2e6;
     padding-bottom: 15px;
@@ -588,7 +593,6 @@ body {
     box-shadow: 0 0 0 2px rgba(250, 4, 0, 0.2);
 }
 
-/* Agregar estos estilos al final del archivo */
 .cart-count {
     position: absolute;
     top: -5px;
@@ -600,9 +604,7 @@ body {
     font-size: 0.8em;
 }
 
-.modal-content {
-    border-radius: 15px;
-}
+
 
 .btn-success {
     background-color: #4CAF50;
@@ -612,14 +614,6 @@ body {
 .btn-success:hover {
     background-color: #45a049;
     border-color: #45a049;
-}
-
-.table {
-    margin-bottom: 0;
-}
-
-.table td {
-    vertical-align: middle;
 }
 
 .input-group-sm {
@@ -655,6 +649,7 @@ body {
 }
 
 /* Estilos para la tabla del carrito */
+
 .table-container {
     background: white;
     border-radius: 10px;
@@ -665,6 +660,7 @@ body {
 .table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 0;
 }
 
 .table th {
@@ -722,21 +718,6 @@ body {
     background-color: #d30505;
 }
 
-/* Estilos para el total */
-.cart-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-top: 2px solid #dee2e6;
-}
-
-.cart-total h4 {
-    margin: 0;
-    color: #333;
-}
-
 /* Estilos para las imágenes de productos */
 .product-img {
     width: 80px;
@@ -772,403 +753,15 @@ body {
     margin-bottom: 20px;
 }
 
-
-/* Estilos responsivos */
-@media (max-width: 1200px) {
-  .header label {
-      display: block;
-      cursor: pointer;
-      order: 1; /* Asegura que aparezca primero */
-  }
-
-  .hamburgueza {
-      position: relative;
-      left: 0; /* Reseteamos la posición right anterior */
-      height: 30px; /* Ajustamos el tamaño */
-      width: auto;
-      margin-right: 20px; /* Aumentamos el margen derecho */
-      margin-top: -35px;
-  }
-
-  .logo {
-      font-size: 35px;
-      position: relative;
-      left: 50px; 
-      order: 2; 
-      margin-left: 80px; 
-  }
-
-  .header {
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start; 
-      gap: 15px; 
-  }
-
-  .menu-icons {
-      gap: 10px; 
-  }
-
-
-  .logo {
-      font-size: 45px;
-      position: relative;
-      left:-40px;
-  }
-
-  .hamburgueza {
-      position: absolute;
-      right: 600%;
-      height: 70px;
-  }
-
-  .header .navigation {
-      border: 1px solid rgb(255, 255, 255);
-      position: absolute;
-      top: 100%;
-      left: 0px;
-      right: 0;
-      background-color: rgb(248, 2, 2);
-      display: none;
-  }
-
-  .header .navigation ul li ul li a {
-      position: relative;
-  }
-
-  .header .navigation ul li ul li ul li a {
-    left: 40px;
-    position: relative;
-  }
-
-  .header .navigation ul li {
-    position: relative;
-      width: 100%;
-      left: 270px;
-  }
-
-  .header .navigation ul li a {
-      padding: 8px 30px 8px 10%;
-  }
-
-  .header .navigation ul li ul {
-      position: relative;
-      width: 100%;
-      left: 45px;
-  }
-
-  .header .navigation ul li ul li {
-      background-color: rgba(252, 0, 0, 0.659);
-      left: 0px;
-  }
-
-  .header .navigation ul li ul li ul {
-      position: relative;
-      width: 100%;
-      left: 0px;
-  }
-
-  .header .navigation ul li ul li ul li {
-      left: 40px;
-  }
-
-  #toggle:checked ~ .navigation {
-      display: block;
-  }
-
-
-  /* Estilos responsivos para el footer */
-  .footer-content {
-      flex-direction: column;
-  }
-
-  .footer-section {
-      flex-basis: 100%;
-      text-align: center;
-  }
-
-  .social-icons {
-      justify-content: center;
-  }
-  .footer {
-    padding: 30px 0 15px;
-  }
-
-  .footer-section h3 {
-      font-size: 16px;
-  }
-
-  .footer-section {
-      margin-bottom: 20px;
-  }
-
-  .social-icons a {
-      width: 35px;
-      height: 35px;
-  }
-
-  .social-icons svg {
-      width: 18px;
-      height: 18px;
-  }
-
-  .footer-bottom p {
-      font-size: 12px;
-  }
-
-  /* Estilos responsivos para el carrusel */
-  .carrusel-container {
-    margin: 80px 20px 50px; 
-  }
-
-  .carrusel-imagen {
-    width: 100%;
-    margin: 0px auto;
-    max-height: 70vh;
-    object-fit: contain;
-  }
-
-  /* Agrega padding-top al body para compensar la barra de navegación fija */
-  body {
-    padding-top: 50px; 
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-  }
-
-  .header {
-    height: 50px; 
-  }
-
-  .main-content {
-    padding-top: 10px;
-  }
-
-  /* Nuevos estilos para los controles de zoom en modo responsivo */
-  #mapa .gm-bundled-control {
-    bottom: 10px !important;
-    left: 10px !important;
-    top: auto !important;
-    right: auto !important;
-  }
-  
-  #mapa .gm-bundled-control .gmnoprint > div {
-    width: 40px !important;
-    height: 81px !important;
-  }
-  
-  /* Aseguramos que el menú desplegable esté por encima del mapa */
-  .header .navigation {
-    z-index: 1001;
-  }
-
-  /* Estilos para los controles de zoom en modo responsivo */
-  .leaflet-control-zoom {
-    position: fixed !important;
-    bottom: 200px !important;
-    left: 20px !important;
-    top: auto !important;
-    right: auto !important;
-    z-index: 1000 !important;
-  }
-  
-  .leaflet-control-zoom a {
-    width: 30px !important;
-    height: 30px !important;
-    line-height: 30px !important;
-    font-size: 18px !important;
-    background-color: white !important;
-    color: #333 !important;
-    border: 2px solid rgba(0,0,0,0.2) !important;
-    border-radius: 4px !important;
-    display: block !important;
-  }
-
-  .leaflet-control-zoom-in {
-    margin-bottom: 5px !important;
-  }
-
-  /* Asegura que el menú desplegable esté por encima del mapa */
-  .header .navigation {
-    z-index: 1001;
-  }
-
-  .productos-grid {
-    display: grid;  
-    grid-template-columns: repeat(2, 1fr);  
-    gap: 15px;
-    padding: 0 15px;
-  }
-  
-  .producto {
-    width: 100%;  
-    margin: 0; 
-  }
-
-  .productos-grid {
-    grid-template-columns: 1fr;  
-  }
-
-  .container-cart-icon{
-    margin-top: -5px;
-  }
-    .table-responsive {
-        margin-bottom: 0;
-    }
-    
-    .card {
-        margin: 10px;
-    }
-}
-
-
-/* Estilos responsivos */
-@media (max-width: 1200px) {
-    .table-responsive {
-        overflow-x: auto;
-    }
-    
-    .table th, 
-    .table td {
-        padding: 10px;
-    }
-    
-    .product-img {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .quantity-controls {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .cart-total {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .btn-success {
-        width: 100%;
-    }
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .fade-in {
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Mensajes de estado */
-.status-message {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
-.success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
 
-.error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
 
-/* Estilos para el resumen de compra */
-.product-img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 5px;
-}
 
-.quantity-controls {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
-.quantity-btn {
-    width: 28px;
-    height: 28px;
-    border: 1px solid #dee2e6;
-    background: white;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.quantity-btn:hover:not([disabled]) {
-    background: #f8f9fa;
-}
-
-.quantity-btn[disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.card {
-    border: none;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-.card-header {
-    background: white;
-    border-bottom: 1px solid #dee2e6;
-}
-
-#checkout-btn {
-    background-color: rgb(250, 4, 0);
-    border: none;
-}
-
-#checkout-btn:hover {
-    background-color: #d30505;
-}
-
-/* Estilos para el resumen de productos */
-.resumen-item {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.resumen-item:last-child {
-    border-bottom: none;
-}
-
-.resumen-item h6 {
-    font-size: 0.9rem;
-    margin-bottom: 2px;
-}
-
-.resumen-item small {
-    font-size: 0.8rem;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 1300px) {
-    .card {
-        margin-bottom: 1rem;
-    }
-    
-    .resumen-item {
-        padding: 8px;
-    }
-}
 
 
 
